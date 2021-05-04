@@ -46,7 +46,7 @@ def threaded_client(conn, game, id):
 
 if __name__ == '__main__':
 
-    server = "localhost"
+    server = ""  # listens all interfaces
     port = 5555
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
