@@ -43,7 +43,14 @@ class HelloCommand(Command):
         self.type = CommandType.HELLO
         self.payload = ""
 
+
 class PingCommand(Command):
     def __init__(self):
         self.type = CommandType.PING
+        self.payload = ""
+
+
+class StepCommand(Command):
+    def __init__(self):
+        self.type = CommandType.STEP
         self.payload = ""

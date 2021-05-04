@@ -1,2 +1,11 @@
 pip~=21.0.1
 setuptools~=49.2.1
+py~=1.10.0
+colorama~=0.4.4
+attrs~=20.3.0
+toml~=0.10.2
+pytest~=6.2.3
+pluggy~=0.13.1
+iniconfig~=1.1.1
+atomicwrites~=1.4.0
+pyparsing~=2.4.7
