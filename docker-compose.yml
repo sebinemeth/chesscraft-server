@@ -1,6 +1,7 @@
 version: "3.3"
 services:
   chesscraft-server:
+    container_name: chesscraft-server
     build: .
     ports:
       - "5555:5555"
