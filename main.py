@@ -65,4 +65,7 @@ if __name__ == '__main__':
         conn, addr = s.accept()
         print("Connected to:", addr)
 
+        if len(g.players) == 2:
+            g = Game()
+
         g.add_player(start_new_thread(threaded_client, (conn, g, len(g.players),)))
