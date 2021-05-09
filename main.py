@@ -14,7 +14,8 @@ def get_response(req, game, id):
     if game.status:
         if req.type == CommandType.STEP:
             try:
-                json.loads(req.payload)
+                if len(req.payload) > 0:
+                    json.loads(req.payload)
                 game.state = req.payload
                 game.next_round()
             except Exception as e:
