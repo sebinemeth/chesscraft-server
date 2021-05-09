@@ -1,3 +1,4 @@
+import json
 import socket
 from _thread import *
 
@@ -12,8 +13,13 @@ def get_response(req, game, id):
         return hello
     if game.status:
         if req.type == CommandType.STEP:
-            game.state = req.payload
-            game.next_round()
+            try:
+                json.loads(req.payload)
+                game.state = req.payload
+                game.next_round()
+            except Exception as e:
+                print(e)
+                return ErrorCommand()
         return GameStateCommand(game)
     else:
         return WaitCommand()
