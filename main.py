@@ -20,7 +20,7 @@ def get_response(req, game, id):
                 game.next_round()
             except Exception as e:
                 print(e)
-                return ErrorCommand()
+                return ErrorCommand(req.payload)
         return GameStateCommand(game)
     else:
         return WaitCommand()

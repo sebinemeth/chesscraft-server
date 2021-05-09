@@ -58,6 +58,6 @@ class StepCommand(Command):
 
 
 class ErrorCommand(Command):
-    def __init__(self):
+    def __init__(self, message=""):
         self.type = CommandType.ERROR
-        self.payload = ""
+        self.payload = message
